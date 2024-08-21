@@ -15,7 +15,8 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon:()=><FontAwesome name='home' color='gray' size={29}/>,
+          tabBarIcon:({focused})=><FontAwesome name='home' color={focused? "#0A79DF": "gray"} size={29}/>,
+          tabBarActiveTintColor:'blue',
           headerShown:false}}
          
       />
@@ -25,16 +26,14 @@ export default function TabLayout() {
         options={{
           title: 'Incomes',
           headerShown:false, 
-          tabBarIcon:()=><FontAwesome  name='dollar'  color='gray' size={29} />
-        }}
+          tabBarIcon:({focused})=><FontAwesome name='dollar' color={focused? "#0A79DF": "gray"} size={29}/>,        }}
       />
       <Tabs.Screen
         name="expense"
         options={{
           title: 'Expenses',
           headerShown:false,
-          tabBarIcon:()=><FontAwesome  name='credit-card' color='gray' size={29} />
-        }}
+          tabBarIcon:({focused})=><FontAwesome name='credit-card' color={focused? "#3498DB": "gray"} size={29}/>,        }}
       />
     </Tabs>
   );

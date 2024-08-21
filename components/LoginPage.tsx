@@ -7,6 +7,7 @@ import { LoginSchema } from './helper/loginSchema';
 export default function Loginpage() {
   const router=useRouter();
    const handlesubmit=()=>{
+
     router.navigate('/(drawer)/(tabs)/')
   }
   return (
