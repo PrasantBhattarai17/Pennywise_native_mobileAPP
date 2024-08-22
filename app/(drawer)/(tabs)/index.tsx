@@ -1,9 +1,10 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+import MoneyCard from '../../../components/MoneyCard';
 
 export default function TabOneScreen() {
   return (
-    <View >
-      <Text className='text-xl text-red-600'>Home</Text>
+    <View className='flex-1 items-center justify-center' >
+     <MoneyCard/>
     </View>
   );
 }
