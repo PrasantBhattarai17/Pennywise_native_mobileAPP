@@ -9,11 +9,11 @@ import { router } from "expo-router";
 
 const MoneyCard = () => {
   return (
-    <ScrollView>
+    <ScrollView >
       {CardsData.map((item) => (
         <View
         key={item?.amount}
-        className=" m-5 flex-1 flex-col w-64  h-44 border-2 border-gray-200 bg-white rounded-lg shadow-xl"
+        className=" m-5 flex-1 flex-col w-[300px]  h-44 border-2 border-gray-200 bg-white rounded-lg shadow-xl"
         >
           <TouchableOpacity onPress={()=>{router.navigate(item?.navPage)}} className="flex-1">
           <View className="flex-1 flex-row justify-center my-2 ">

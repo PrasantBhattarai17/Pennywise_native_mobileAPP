@@ -39,7 +39,7 @@ export const  CardsData:CardData[]=[
     "changedAmount": "+$500.00",
     "changedPercent": 20.00,
     'navPage':'/savings',
-  }
+  },
 ]
 
 ;

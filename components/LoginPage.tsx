@@ -6,9 +6,32 @@ import { LoginSchema } from './helper/loginSchema';
 
 export default function Loginpage() {
   const router=useRouter();
-   const handlesubmit=()=>{
+  const Loginrequest=async(username:string,password:string)=>{
+    // try {
+    //   const response = await fetch('/login', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       username,
+    //       password,
+    //     }),
+    //   });
 
-    router.navigate('/(drawer)/(tabs)/')
+      // const data = await response.json();
+      // console.log(data);
+      // if (response.ok) {
+        router.navigate('/(drawer)/(tabs)/');
+    //   } else {
+    //     console.error('Login failed:', data);
+    //   }
+    // } catch (error) {
+    //   console.error('Error during login request:', error);
+    // }
+  }
+   const handlesubmit=(values:any)=>{
+    Loginrequest(values.username, values.password);
   }
   return (
     <Formik
