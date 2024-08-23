@@ -11,13 +11,15 @@ export default function _layout() {
     <GestureHandlerRootView>
       <Drawer
       screenOptions={{
+       headerStyle:{backgroundColor:'blueviolet'},
+       headerTintColor:"white"
       }}>
       <Drawer.Screen name='(tabs)' options={{
        title:"Overview",
        drawerActiveTintColor:'blueviolet',
        drawerIcon:({focused})=><MaterialCommunityIcons name='view-grid-outline' color={focused?'blueviolet':'gray'} size={32}/>
     }}></Drawer.Screen>
-        <Drawer.Screen name='chats'
+        <Drawer.Screen name='savings'
         options={{
           title:'Savings',
           drawerActiveTintColor:'blueviolet',

@@ -10,13 +10,14 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        tabBarStyle: { backgroundColor: 'blueviolet'},
         tabBarShowLabel:false,
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon:({focused})=><FontAwesome name='home' color={focused? "blueviolet": "gray"} size={29}/>,
+          tabBarIcon:({focused})=><FontAwesome name='home' color={focused? "white": "antiquewhite"} size={29}/>,
           tabBarActiveTintColor:'blue',
           headerShown:false}}
           
@@ -28,14 +29,14 @@ export default function TabLayout() {
         options={{
           title: 'Incomes',
           headerShown:false, 
-          tabBarIcon:({focused})=><FontAwesome name='dollar' color={focused? "blueviolet": "gray"} size={29}/>,        }}
+          tabBarIcon:({focused})=><FontAwesome name='dollar' color={focused? "white": "antiquewhite"} size={29}/>,        }}
       />
       <Tabs.Screen
         name="expense"
         options={{
           title: 'Expenses',
           headerShown:false,
-          tabBarIcon:({focused})=><FontAwesome name='credit-card' color={focused? "blueviolet": "gray"} size={29}/>,        }}
+          tabBarIcon:({focused})=><FontAwesome name='credit-card' color={focused?  "white": "antiquewhite"} size={29}/>,        }}
       />
     </Tabs>
   );

@@ -14,7 +14,7 @@ export default function App() {
         <Text className='text-lg  font-semibold text-gray-500 text-center '>Save Smart,Live Wise!</Text>
         </View>
      <Loginpage/>
-      <StatusBar  />
+      <StatusBar   backgroundColor='white'/>
     </View>
     </GestureHandlerRootView>
   );
