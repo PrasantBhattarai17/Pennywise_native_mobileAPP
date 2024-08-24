@@ -1,6 +1,5 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
-import { ScrollView } from "react-native-gesture-handler";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { CardsData } from "./utils/constants";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -13,7 +12,7 @@ const MoneyCard = () => {
       {CardsData.map((item) => (
         <View
         key={item?.amount}
-        className="  flex-1  flex-row m-1  h-32 border-2 border-gray-200 bg-white rounded-lg shadow-xl"
+        className="  flex-1  flex-row mx-2   h-32 border-2 border-gray-200 bg-white rounded-lg shadow-xl"
         >
           <TouchableOpacity onPress={()=>{router.navigate(item?.navPage)}} className="flex-1">
           <View className="mt-2 flex-row justify-center  ">

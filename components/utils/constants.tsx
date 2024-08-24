@@ -4,6 +4,7 @@ export const Piechart=require("./pie-chart.png");
 export const Plans=require("./plans.png");
 export const User=require("./user.png");
 export const Plus=require("./addplus.png");
+export const BalanceBg=require("./balanceBG.jpg");
 
 type IconName = 'currency-usd' | 'credit-card' | 'piggy-bank-outline';
 
