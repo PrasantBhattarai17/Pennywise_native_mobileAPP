@@ -34,16 +34,7 @@ export const  CardsData:CardData[]=[
     "amount": 2000.00,
     "changedAmount": "-$500.00",
     "changedPercent": 20.00,
-    'navPage':'/expense'
-  },
-  {
-    "name": "Savings",
-    "iconLabel":"piggy-bank-outline",
-    "isincrease": true,
-    "amount": 3000.00,
-    "changedAmount": "+$500.00",
-    "changedPercent": 20.00,
-    'navPage':'/savings',
+    'navPage':'/two'
   },
 ]
 
