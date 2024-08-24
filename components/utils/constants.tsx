@@ -1,4 +1,9 @@
 export const Logo=require("./pw.png");
+export const wallet=require("./wallet.png");
+export const Piechart=require("./pie-chart.png");
+export const Plans=require("./plans.png");
+export const User=require("./user.png");
+export const Plus=require("./addplus.png");
 
 type IconName = 'currency-usd' | 'credit-card' | 'piggy-bank-outline';
 
