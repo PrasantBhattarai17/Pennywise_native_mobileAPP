@@ -9,7 +9,7 @@ import { router } from "expo-router";
 
 const MoneyCard = () => {
   return (
-    <ScrollView >
+    <ScrollView  >
       {CardsData.map((item) => (
         <View
         key={item?.amount}
