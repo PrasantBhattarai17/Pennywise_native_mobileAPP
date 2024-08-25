@@ -3,32 +3,33 @@ import { Formik } from 'formik';
 import {  Text, TouchableOpacity, View } from 'react-native';
 import {  TextInput } from 'react-native-gesture-handler';
 import { LoginSchema } from './helper/loginSchema';
+import { useState } from 'react';
 
 export default function Loginpage() {
   const router=useRouter();
+  const [error,setError]=useState<string>('');
   const Loginrequest=async(username:string,password:string)=>{
-    // try {
-    //   const response = await fetch('/login', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       username,
-    //       password,
-    //     }),
-    //   });
+    try {
+      const response = await fetch('https://financemanager-1iok.onrender.com/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
 
-      // const data = await response.json();
-      // console.log(data);
-      // if (response.ok) {
+      const data = await response.text();
+      console.log(data);
+      if (response.ok && data!='User not found  Cant Proceed Further ') {
         router.navigate('/(drawer)/(tabs)/');
-    //   } else {
-    //     console.error('Login failed:', data);
-    //   }
-    // } catch (error) {
-    //   console.error('Error during login request:', error);
-    // }
+      } else {
+        setError(data);      }
+    } catch (error) {
+      console.error('Error during login request:', error);
+    }
   }
    const handlesubmit=(values:any)=>{
     Loginrequest(values.username, values.password);
@@ -54,6 +55,7 @@ export default function Loginpage() {
       {errors.username&&<Text className='text-red-600 text-md '>{errors.username}</Text>}
       <TextInput onChangeText={handleChange('password')} value={values.password} placeholder='Enter password' inputMode='text' secureTextEntry className='p-2 border-2 w-56 rounded-md  border-gray-300 m-3'></TextInput>
       {errors.password&&<Text className='text-red-600 text-md '>{errors.password}</Text>}
+      {error&&<Text className='text-red-600 text-md '>{error}</Text>}
         <TouchableOpacity onPress={()=>handleSubmit()}><Text className='text-white bg-purple-600 text-2xl rounded border-white w-28 text-center font-bold m-2 p-1 '>
           login
           </Text></TouchableOpacity>
