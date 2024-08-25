@@ -63,7 +63,7 @@ const SignUpPage = () => {
           Sign Up
           </Text></TouchableOpacity>
           <View className='flex-row items-center justify-center my-2 space-x-1'>
-          <Text className='text-lg  font-semibold text-black  '>Already registered?</Text>
+          <Text   onPress={()=>router.push('/getDOtp')} className='text-lg  font-semibold text-black  '>Already registered?</Text>
           <TouchableOpacity onPress={()=>router.back()}><Text className='text-lg  font-semibold text-gray-500  '>Login</Text></TouchableOpacity>
           </View>
     </View>)
