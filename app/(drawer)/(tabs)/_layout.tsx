@@ -34,7 +34,7 @@ const CustomTabBarButton: React.FC<CustomTabBarButtonProps> = ({
         width: 70,
         borderRadius: 35,
         backgroundColor:'#DAE0E2',
-        elevation: 10,
+        elevation: 5,
       }}
     >
       {children}
@@ -88,6 +88,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="two"
         options={{
+          
           title: "Report",
           tabBarIcon: ({ focused }) => (
             <View className="flex-1 justify-center items-center">

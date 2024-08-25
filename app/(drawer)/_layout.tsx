@@ -12,7 +12,7 @@ export default function _layout() {
       <Drawer
       screenOptions={{
        headerStyle:{backgroundColor:'blueviolet'},
-       headerTintColor:"white"
+       headerTintColor:"white",
       }}>
       <Drawer.Screen name='(tabs)' options={{
        title:"Overview",
