@@ -39,5 +39,47 @@ export const  CardsData:CardData[]=[
   },
 ]
 
-;
+export const financialCategories = [
+  {
+    isIncome: true,
+    category: 'Salary',
+    amount: 5000
+  },
+  {
+    isIncome: true,
+    category: 'Investment',
+    amount: 1500
+  },
+  {
+    isIncome: true,
+    category: 'Real Estate',
+    amount: 3000
+  },
+  {
+    isIncome: true,
+    category: 'Others',
+    amount: 1000
+  },
+  {
+    isIncome: false,
+    category: 'Groceries',
+    amount: 600
+  },
+  {
+    isIncome: false,
+    category: 'Bills',
+    amount: 800
+  },
+  {
+    isIncome: false,
+    category: 'Entertainment',
+    amount: 400
+  },
+  {
+    isIncome: false,
+    category: 'Others',
+    amount: 200
+  }
+];
+
   
