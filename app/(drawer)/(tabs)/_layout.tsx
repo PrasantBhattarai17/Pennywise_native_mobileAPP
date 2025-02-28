@@ -50,14 +50,13 @@ export default function TabLayout() {
           backgroundColor: "blueviolet",
           position: "absolute",
           bottom: 10,
-          left: 10,
-          right: 10,
+         
           elevation: 10,
           borderRadius: 10,
           height: 80,
         },
         tabBarShowLabel: false,
-        tabBarLabelStyle: { fontSize: 14, bottom: 15 },
+        tabBarLabelStyle: { fontSize:5 },
         tabBarInactiveTintColor: "#DAE0E2",
         tabBarActiveTintColor: "white",
       }}
@@ -69,7 +68,7 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => (
             <View className="flex-1 justify-center items-center">
               <Image
-                style={{ height: 30, width: 30 }}
+                style={{ height: 33, width: 34,marginTop:40 }}
                 resizeMode="contain"
                 tintColor={focused ? "white" : "#DAE0E2"}
                 source={wallet}
@@ -78,7 +77,6 @@ export default function TabLayout() {
                 className="text-sm "
                 style={{ color: focused ? "white" : "#DAE0E2" }}
               >
-                Wallet
               </Text>
             </View>
           ),
@@ -94,7 +92,7 @@ export default function TabLayout() {
             <View className="flex-1 justify-center items-center">
               <Image
                 resizeMode="contain"
-                style={{ height: 27, width: 27, marginTop: 3 }}
+                style={{ height: 33, width: 34,marginTop:40 }}
                 tintColor={focused ? "white" : "#DAE0E2"}
                 source={Piechart}
               />
@@ -102,7 +100,7 @@ export default function TabLayout() {
                 className="text-sm  "
                 style={{ color: focused ? "white" : "#DAE0E2" }}
               >
-                Report
+                
               </Text>
             </View>
           ),
@@ -114,9 +112,9 @@ export default function TabLayout() {
         options={{
           title: "Add",
           tabBarIcon: () => (
-            <View className="flex-1 justify-center items-center">
+            <View className="flex-1 justify-center items-center ">
               <Image
-                style={{ height: 35, width: 35, tintColor: "blueviolet" }}
+                style={{ height: 30, width: 30, tintColor: "blueviolet",marginTop:40,marginLeft:38 }}
                 resizeMode="contain"
                 source={Plus}
               />
@@ -135,7 +133,7 @@ export default function TabLayout() {
             <View className="flex-1 justify-center items-center">
               <Image
                 resizeMode="contain"
-                style={{ height: 27, width: 27, marginTop: 3 }}
+                style={{ height: 33, width: 34, marginTop: 40 }}
                 tintColor={focused ? "white" : "#DAE0E2"}
                 source={Plans}
               />
@@ -143,7 +141,7 @@ export default function TabLayout() {
                 className="text-sm  "
                 style={{ color: focused ? "white" : "#DAE0E2" }}
               >
-                Plans
+                
               </Text>
             </View>
           ),
@@ -158,7 +156,7 @@ export default function TabLayout() {
             <View className="flex-1 justify-center items-center">
               <Image
                 resizeMode="contain"
-                style={{ height: 27, width: 27, marginTop: 3 }}
+                style={{ height: 33, width: 34, marginTop: 40 }}
                 tintColor={focused ? "white" : "#DAE0E2"}
                 source={User}
               />
@@ -166,7 +164,7 @@ export default function TabLayout() {
                 className="text-sm "
                 style={{ color: focused ? "white" : "#DAE0E2" }}
               >
-                Account
+                
               </Text>
             </View>
           ),
